@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Hover Part */
+.div1{
+    height: 300px;
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    margin-top: 350px;
+ 
+}
+.main-div{
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+.main-div img{
+    max-width: 100%;
+}
+.inner-div h3{
+    font-size: 30px;
+    margin-top: 180px;
+}
+.inner-div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: rgba(82, 78, 75, 0.5);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+
+}
+.main-div:hover .inner-div{
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+}
+/* Menu */
+.menu{
+    background-color: darkgoldenrod;
+    margin-top: 20px;
+}
+.menu ul{
+    text-align: center;
+  
+}
+.menu ul li{
+    display: inline-block;
+    margin-left: -4px;
+}
+.menu ul li a{
+    display: inline-block;
+    color: #ddd;
+    font-size: 20px;
+    padding: 20px 35px;
+    text-decoration: none;
+    border-right: 1px solid #ddd;
+
+}
+.menu ul li:first-child a{
+    border-left: 1px solid #ddd;
+}
+.menu ul li:hover > a{
+    background-color: #d35400;
+    transition: .5s;
+}
+/* Dropdown Menu */
+.menu ul li{
+    position: relative;
+}
+.menu ul li ul{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 160px;
+    background-color: darkgoldenrod;
+    border-bottom: 1px solid #ddd;
+    margin-left: 0;
+    margin-right: 0;
+    transition: .4s;
+}
+.menu ul li ul li{
+    display: block;   
+}
+.menu ul li ul li a{
+    display: block;
+    color: #ddd;
+    font-size: 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+
+}
+.menu ul li ul li:first-child a{
+    border-left:  none;
+}
+/* HOver Part */
+.menu ul li ul{
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+}
+.menu ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
